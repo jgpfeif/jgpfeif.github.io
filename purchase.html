@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<div class="navbar">
+    <a href="index.html"> <img src="images/DMU_color.png" alt="Dangerous Men" width="238" height="64"></a>
+    <a href="index.html">Home</a>
+    <a href="examples.html">Calendar</a>
+    <a href="packages.html">Packages</a>
+    </div>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Next Steps</title>
+    <h1>Next Steps</h1>
+       <p>
+           
+           <script>
+               function validate(){
+                   var first=document.getElementById('first').value;
+                   var last=document.getElementById('last').value;
+                   var address=document.getElementById('address').value;
+                   var city=document.getElementById('city').value;
+                   var state=document.getElementById('state').value;
+                   var zip=document.getElementById('zip').value;
+                   if(first!=''&& first!='First Name' && last!='' && last!="Last Name" && address!='' && address!='Address' && city!='' &&city!='City' &&state!='' &&state!='State' &&zip!='' &&zip!='Zip'){
+                       sendMail();
+                       alert("Sent Message");
+                   }
+                   else{alert("Please make sure all textboxes are filled out!")};   
+               }
+           function sendMail(){
+               /*var first=document.getElementById('first').value;
+                   var last=document.getElementById('last').value;
+                   var address=document.getElementById('address').value;
+                   var city=document.getElementById('city').value;
+                   var state=document.getElementById('state').value;
+                   var zip=document.getElementById('zip').value;
+               var body=''+first+''+last+' ordering a Bronze Package from '+address+''+ city+','+state+''+ zip;*/
+               
+        document.location.href='mailto:jackgpfeifer@gmail.com?subject=Candles&body=hi';
+    }
+           </script>
+           <li>Enter information below</li>
+        <li>
+           Click the send email button<br>
+           </li>
+        <li>   
+If Email doesn't popup, send an email to CalebS@gmail.com with Candles as the subject and include which bundle you would like.
+        </li>
+           <li>
+           Either Send money to Caleb's Address or meet him in person for payment
+           </li>
+           <li>
+           Candles will be sent out on the first of each month
+           </li>
+    </p>
+    <input type="text" size="10" value="First Name" onfocus="this.value=''" id="first"><br><input type="text" size="10" value="Last Name" onfocus="this.value=''" id="last"><br><input type="text" size="10" value="Address" onfocus="this.value=''"id="address"><br><input type="text" size="10" value="City" onfocus="this.value=''"id="City"><br><input type="text" size="10" value="State" onfocus="this.value=''"id="state"><br><input type="text" size="10" value="Zip" onfocus="this.value=''"id="zip"><br><br>Quantity<select name="quantity">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="Other">Other</option>
+        </select>
+    <br><br><br>
+    <button type='button'
+            onclick="sendMail();">Send Email
+ </button>
+</html>
